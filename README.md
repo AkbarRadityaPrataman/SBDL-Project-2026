@@ -1,205 +1,128 @@
 # 📦 High-Volume Catalog Sales Center — OODB System
-> **Mata Kuliah:** Sistem Basis Data Lanjut (SBDL)
-> **Program Studi:** Teknik Informatika — Universitas Bakrie
-> **Tahun:** 2026
+### **Mata Kuliah:** Sistem Basis Data Lanjut (SBDL)
+**Program Studi:** Teknik Informatika — Universitas Bakrie  
+**Tahun Akademik:** Genap 2026
 
 ---
 
 ## 📋 Deskripsi Proyek
 
-Proyek ini merupakan implementasi sistem basis data berorientasi objek (OODB) untuk mensimulasikan **pusat penjualan katalog e-business** bervolume tinggi *(High-Volume Catalog Sales Center — Case 2)*.
+Proyek ini merupakan implementasi sistem basis data berorientasi objek (OODB) untuk mensimulasikan **pusat penjualan katalog e-business bervolume tinggi** *(High-Volume Catalog Sales Center — Case 2)*. Proyek ini bertujuan untuk menganalisis dan mengoptimalkan ketersediaan data (*data availability*) dari status saat ini (99.9%) menuju target industri yang lebih tinggi menggunakan teknologi basis data berorientasi objek.
 
-### Latar Belakang
+### Latar Belakang Proyek (Case 2)
 
 | Aspek | Detail |
 |-------|--------|
 | **Status Availability** | 99.9% (saat ini) |
-| **Tantangan** | Keluhan pelanggan akibat downtime/outage |
-| **Solusi** | Migrasi ke Object-Oriented Database (OODB) menggunakan **db4o** |
-
-Migrasi ini bertujuan mengoptimalkan performa sistem dan memungkinkan pengelolaan struktur data yang lebih kompleks dibandingkan pendekatan relasional tradisional.
+| **Tantangan** | Mengatasi keluhan berkala pelanggan akibat *downtime*/*data outages* |
+| **Solusi Teknis** | Migrasi ke Object-Oriented Database (OODB) menggunakan **db4o** untuk pemodelan data yang lebih kompleks |
 
 ---
 
-## 👥 Tim Proyek
+## 👥 Tim Proyek & Pembagian Tugas
 
-| Nama | NIM | Peran |
-|------|-----|-------|
-| Akbar Raditya Prataman | 1242001016 | Lead Developer & ODL/OQL Implementation |
-| Nikita Dwi Qoriah | 1242001035 | System Analyst & E-ERD Design |
-| Rafiif Muhammad Daffa | 1242001004 | Database Architecture & Diagramming |
-| Shakyawan Bagus Wijaya | 1242001026 | CLI Application & Quality Assurance |
-
----
-
-## 🛠️ Tech Stack
-
-| Komponen | Teknologi |
-|----------|-----------|
-| **Language** | Java (JDK 8+) |
-| **Database Engine** | db4o (Object-Oriented Database) |
-| **IDE** | Eclipse IDE |
-| **Modeling (ERD)** | Draw.io |
-| **Modeling (Class/Object)** | Papyrus |
-| **Interface** | Java CLI (Command Line Interface) |
+| Nama Lengkap | NIM | Peran / Tanggung Jawab Utama |
+|:---|:---|:---|
+| **Akbar Raditya Pratama** | 1242001016 | Metodology, Dokumentation & Github Management |
+| **Nikita Dwi Qoriah** | 1242001035 | Entity Relationship Diagram & Class Diagram Design |
+| **Rafiif Muhammad Daffa** | 1242001004 | Object Diagram, Testing & Slide Presentation |
+| **Shakyawan Bagus Wijaya** | 1242001026 | Object Oriented Database & Application CLI Development |
 
 ---
 
-## 🚀 Cara Menjalankan Project
+## 🛠️ Tech Stack & Komponen Sistem
 
-### 1. Clone Repository
-```bash
-git clone https://github.com/AkbarRadityaPrataman/Project-System-Basis-Data-Lanjut.git
-cd Project-System-Basis-Data-Lanjut
-```
-
-### 2. Setup Library db4o
-- Download `db4o-X.X.jar` (sesuaikan versi)
-- Buka project di **Eclipse IDE**
-- Klik kanan project → **Build Path** → **Add External Archives**
-- Pilih file `.jar` yang telah di-download
-- Pastikan library muncul di **Referenced Libraries**
-
-### 3. Jalankan Aplikasi
-- Buka folder `src/`
-- Jalankan file `Main.java`
-- Atau melalui terminal:
-```bash
-javac -cp .;db4o-X.X.jar src/Main.java
-java -cp .;db4o-X.X.jar Main
-```
+| Komponen | Teknologi | Detail Implementasi |
+|----------|-----------|---------------------|
+| **Language** | Java | JDK 8+ / Implementasi Berorientasi Objek |
+| **Database Engine** | db4o | Object-Oriented Database (Version 7 / 8) |
+| **IDE** | Eclipse IDE | Lingkungan Pengembangan Utama |
+| **Modeling (ERD)** | Draw.io | Perancangan Extended Entity-Relationship Diagram |
+| **Modeling (Diagram)** | Papyrus | Perancangan Class Diagram & Object Diagram |
+| **Interface** | Java CLI | Command Line Interface Menu pada Console |
 
 ---
 
-## 📂 Struktur Proyek
+## 📂 Struktur Proyek di GitHub
 
 ```
-Project-System-Basis-Data-Lanjut/
+SBDL-Project-2026/
 │
-├── src/
-│   ├── Main.java                  # Entry point aplikasi CLI
-│   ├── model/                     # Class model / ODL schema
-│   ├── query/
-│   │   ├── QBEQueries.java        # Query By Example (6 queries)
-│   │   ├── NativeQueries.java     # Native Queries (6 queries)
-│   │   └── SODAQueries.java       # SODA Queries (6 queries)
-│   └── util/                      # Utility & helper classes
+├── src/                       # Folder project utama dari Eclipse IDE
+│   └── Eclipse_File_Kelompok2_SBDL.UTS/
+│       ├── .settings/
+│       ├── bin/
+│       └── src/
+│           └── utsdb4o/       # Paket kodingan Java (.java) kelompok
 │
-├── diagrams/
-│   ├── E-ERD.drawio               # Entity-Relationship Diagram
-│   ├── ClassDiagram.uml           # Class Diagram (Papyrus)
-│   └── ObjectDiagram.uml          # Object Diagram (min. 3 instances)
+├── diagrams/                  # File diagram (ERD, Class Diagram, Object Diagram)
+│   ├── E-ERD-Case2-Kelompok2-SBDL.drawio.png
+│   └── ClassDiagram-case2-Kelompok2-SBDL.UTS/ # Folder Papyrus (.uml, .di, .notation)
 │
-├── docs/
-│   ├── query-log.txt              # Log hasil eksekusi query
-│   └── presentation.pdf          # Slide presentasi
+├── docs/                      # Dokumentasi & log file
+│   └── query-log.txt          # Catatan eksekusi query log
 │
-├── lib/
-│   └── db4o-X.X.jar              # Library db4o
+├── lib/                       # Library database external engine
+│   └── db4o-7.2.44.10823-java.jar
 │
-└── README.md
+└── README.md                  # File dokumentasi ini
 ```
 
 ---
 
-## 📐 Deliverables
+## 📐 Deliverables & Implementasi Query
 
-### 1. 🗂️ Database Design
+### 1. Desain Basis Data Berorientasi Objek
 
-#### E-ERD (Extended Entity-Relationship Diagram)
-Representasi visual entitas bisnis dan relasinya, dibuat menggunakan **Draw.io**.
+* **E-ERD:** Representasi diagram relasi entitas untuk High-Volume Sales Center
+  - File: `diagrams/E-ERD-Case2-Kelompok2-SBDL.drawio.png`
 
-#### Class Diagram
-Struktur kelas Java yang menjadi skema OODB, mencakup:
-- Atribut setiap kelas
-- Operasi/method yang tersedia
-- Relasi antar kelas
+* **Class Diagram:** Pemodelan struktural komponen sistem OODB menggunakan Papyrus
+  - File: `diagrams/ClassDiagram-case2-Kelompok2-SBDL.UTS/`
 
-#### Object Diagram
-Contoh instance data nyata dari sistem, dengan **minimal 3 contoh objek** beserta nilai atributnya.
+* **Object Diagram:** Instansiasi minimal 3 kelas objek berbeda
+  - File: `diagrams/ClassDiagram-case2-Kelompok2-SBDL.UTS/` (dalam folder Papyrus)
 
----
+### 2. Skema Logika Object Query Language (OQL)
 
-### 2. 💾 Implementasi OODB (db4o)
+Sistem mengimplementasikan total **18 Query** yang dibagi ke dalam 3 metode utama db4o:
 
-#### ODL — Object Definition Language
-Pendefinisian skema menggunakan Java class, mencakup operasi:
-- **Create** — Menambahkan objek baru ke database
-- **Update** — Memperbarui data objek yang ada
-- **Delete** — Menghapus objek dari database
+#### A. Query-By-Example (QBE) — 6 Queries
+Eksekusi query menggunakan contoh pola objek langsung (Operasi: `SELECT`, `UPDATE`, `DELETE`)
 
-#### OQL — Object Query Language
+#### B. Native Queries (NQ) — 6 Queries
+Pencarian data menggunakan kode Java murni tipe aman (*type-safe* predicate)
 
-**QBE (Query By Example)** — 6 Query
-| No | Tipe | Deskripsi |
-|----|------|-----------|
-| 1 | SELECT | Menampilkan semua data entitas utama |
-| 2 | SELECT | Filter berdasarkan kondisi tertentu |
-| 3 | SELECT | Relasi antar dua entitas |
-| 4 | UPDATE | Memperbarui data berdasarkan kondisi |
-| 5 | UPDATE | Pembaruan massal (bulk update) |
-| 6 | DELETE | Menghapus data berdasarkan kriteria |
-
-**Native Queries (NQ)** — 6 Query
-| No | Tipe | Deskripsi |
-|----|------|-----------|
-| 1 | Filter | Seleksi dengan kondisi tunggal |
-| 2 | Filter | Seleksi dengan kondisi majemuk |
-| 3 | Filter | Filter berbasis relasi objek |
-| 4 | Sort | Pengurutan ascending |
-| 5 | Sort | Pengurutan descending |
-| 6 | Filter + Sort | Kombinasi filter dan pengurutan |
-
-**SODA (Simple Object Database Access)** — 6 Query
-| No | Logika | Deskripsi |
-|----|--------|-----------|
-| 1 | AND | Kombinasi dua kondisi AND |
-| 2 | OR | Kombinasi dua kondisi OR |
-| 3 | NOT | Negasi kondisi |
-| 4 | AND + OR | Kondisi kompleks berlapis |
-| 5 | NOT + AND | Negasi dengan kondisi tambahan |
-| 6 | AND + OR + NOT | Kombinasi penuh tiga operator logika |
+#### C. SODA (Simple Object Database Access) Queries — 6 Queries
+Query tingkat lanjut berbasis *graph-navigation tree* dengan kriteria logika kompleks
 
 ---
 
-### 3. 🖥️ CLI Application
+## 🚀 Cara Menjalankan Project di Eclipse
 
-Aplikasi berbasis teks interaktif yang memungkinkan pengguna melakukan operasi database secara langsung melalui terminal.
+### 1. Build Path Setup
+1. Pastikan project folder `Eclipse_File_Kelompok2_SBDL.UTS` sudah di-import ke Eclipse IDE
+2. Klik kanan pada project → pilih **Properties**
+3. Pilih menu **Java Build Path** → Tab **Libraries** → Klik **Add External JARs**
+4. Arahkan ke folder `/lib` dan pilih file `db4o-7.2.44.10823-java.jar`
 
-**Fitur CLI:**
-- Menu navigasi interaktif
-- Eksekusi query QBE, NQ, dan SODA
-- Tampilan hasil query terformat
-- Operasi CRUD lengkap
-
----
-
-## 📌 Lampiran & Dokumentasi
-
-| Sumber | Link |
-|--------|------|
-| 📺 Video Demonstrasi | [Tonton di YouTube](#) |
-| 📑 Slide Presentasi (PDF) | [Lihat Dokumen](#) |
-| 📝 Query Log (.txt) | [Buka Query Log](#) |
-
-> ⚠️ *Ganti `#` di atas dengan URL sebenarnya setelah diupload.*
+### 2. Jalankan Aplikasi
+* Buka folder `src/utsdb4o/` di Eclipse
+* Klik kanan file `Main.java` → **Run As** → **Java Application**
+* Menu interaktif Command Line Interface (CLI) akan aktif di tab **Console** Eclipse
 
 ---
 
-## 📚 Referensi
+## 📌 Lampiran & Dokumentasi Akhir
 
-- [db4o Documentation](https://sourceforge.net/projects/db4o/)
-- [Java SE 8 Documentation](https://docs.oracle.com/javase/8/docs/)
-- Connolly, T. & Begg, C. — *Database Systems: A Practical Approach to Design, Implementation, and Management*
-
----
-
-## 📄 Lisensi
-
-Proyek ini dibuat untuk keperluan akademik dalam rangka pemenuhan tugas mata kuliah **Sistem Basis Data Lanjut**, Program Studi Teknik Informatika, Universitas Bakrie.
+| Dokumentasi | Link |
+|---|---|
+| 📺 Video Demonstrasi Proyek | [YouTube Link](ISI_LINK_YOUTUBE_DISINI) |
+| 📑 Slide Presentasi Proyek (PDF) | [Slide Link](ISI_LINK_SLIDE_DISINI) |
+| 📁 Main Repository Proyek | [GitHub Repo](https://github.com/AkbarRadityaPrataman/SBDL-Project-2026) |
 
 ---
 
 <div align="center">
-  <sub>© 2026 — Kelompok SBDL | Teknik Informatika, Universitas Bakrie</sub>
+  <sub>© 2026 — Kelompok 2 SBDL | Program Studi Teknik Informatika, Universitas Bakrie</sub>
 </div>
