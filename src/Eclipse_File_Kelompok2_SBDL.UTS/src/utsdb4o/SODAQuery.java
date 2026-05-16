@@ -1,0 +1,254 @@
+package utsdb4o;
+
+import com.db4o.ObjectContainer;
+import com.db4o.ObjectSet;
+import com.db4o.query.Constraint;
+import com.db4o.query.Query;
+import java.util.List;
+import java.util.ArrayList;
+
+/**
+ * SODAQuery: Demonstrasi query SODA yang sudah diperbaiki.
+ */
+public class SODAQuery {
+
+    private ObjectContainer db;
+
+    public SODAQuery(ObjectContainer db) {
+        this.db = db;
+    }
+
+    /**
+     * SODA 1: Find all EBusiness objects
+     */
+    public List<EBusiness> findAllEBusinesses() {
+        System.out.println("\n[SODA] Retrieving all EBusiness objects");
+        Query query = db.query();
+        query.constrain(EBusiness.class);
+        ObjectSet<EBusiness> result = query.execute();
+        List<EBusiness> list = new ArrayList<>();
+        while (result.hasNext()) {
+            EBusiness eb = result.next();
+            System.out.println("    -> " + eb);
+            list.add(eb);
+        }
+        return list;
+    }
+
+    /**
+     * SODA 2: Find Vendors with proposeMonthlyCost > threshold
+     */
+    public List<Vendor> findExpensiveVendors(double threshold) {
+        System.out.println("\n[SODA] Finding Vendors with proposeMonthlyCost > " + threshold);
+        Query query = db.query();
+        query.constrain(Vendor.class);
+        query.descend("proposeMonthlyCost").constrain(threshold).greater();
+        ObjectSet<Vendor> result = query.execute();
+        List<Vendor> list = new ArrayList<>();
+        while (result.hasNext()) {
+            Vendor v = result.next();
+            System.out.println("    -> " + v);
+            list.add(v);
+        }
+        return list;
+    }
+
+    /**
+     * SODA 3: Find DataCenters with hourlyCost less than threshold
+     */
+    public List<DataCenter> findCheapDataCenters(double maxHourlyCost) {
+        System.out.println("\n[SODA] Finding DataCenters with hourlyCost < " + maxHourlyCost);
+        Query query = db.query();
+        query.constrain(DataCenter.class);
+        query.descend("hourlyCost").constrain(maxHourlyCost).smaller();
+        ObjectSet<DataCenter> result = query.execute();
+        List<DataCenter> list = new ArrayList<>();
+        while (result.hasNext()) {
+            DataCenter dc = result.next();
+            System.out.println("    -> " + dc);
+            list.add(dc);
+        }
+        return list;
+    }
+
+    /**
+     * SODA 4: Find Complaints with a specific issueType
+     */
+    public List<Complaint> findComplaintsByIssueType(String issueType) {
+        System.out.println("\n[SODA] Finding Complaints with issueType = '" + issueType + "'");
+        Query query = db.query();
+        query.constrain(Complaint.class);
+        query.descend("issueType").constrain(issueType);
+        ObjectSet<Complaint> result = query.execute();
+        List<Complaint> list = new ArrayList<>();
+        while (result.hasNext()) {
+            Complaint c = result.next();
+            System.out.println("    -> " + c);
+            list.add(c);
+        }
+        return list;
+    }
+
+    /**
+     * SODA 5: Find AvailabilityRecords where availabilityPercent >= threshold
+     * PERBAIKAN: Menggunakan .descend() dan .greater().equal()
+     */
+    public List<AvailabilityRecord> findHighAvailabilityRecords(double minPercent) {
+        System.out.println("\n[SODA] Finding AvailabilityRecords with availabilityPercent >= " + minPercent);
+        Query query = db.query();
+        query.constrain(AvailabilityRecord.class);
+        // Perbaikan di baris ini
+        query.descend("availabilityPercent").constrain(minPercent).greater().equal();
+        
+        ObjectSet<AvailabilityRecord> result = query.execute();
+        List<AvailabilityRecord> list = new ArrayList<>();
+        System.out.println("  Found " + result.size() + " result(s):");
+        while (result.hasNext()) {
+            AvailabilityRecord ar = result.next();
+            System.out.println("    -> " + ar);
+            list.add(ar);
+        }
+        return list;
+    }
+
+    /**
+     * SODA 6: Find CostAnalysis sorted by netSavings descending
+     */
+    public List<CostAnalysis> findAllCostAnalysisSortedBySavings() {
+        System.out.println("\n[SODA] Retrieving all CostAnalysis sorted by netSavings (descending)");
+        Query query = db.query();
+        query.constrain(CostAnalysis.class);
+        query.descend("netSavings").orderDescending();
+        ObjectSet<CostAnalysis> result = query.execute();
+        List<CostAnalysis> list = new ArrayList<>();
+        while (result.hasNext()) {
+            CostAnalysis ca = result.next();
+            System.out.println("    -> " + ca);
+            list.add(ca);
+        }
+        return list;
+    }
+
+    /**
+     * SODA 7: Find DiskDrives with status = "Degraded" or "Failed"
+     */
+    public List<DiskDrive> findProblematicDiskDrives() {
+        System.out.println("\n[SODA] Finding DiskDrives with status 'Degraded' or 'Failed'");
+        Query query = db.query();
+        query.constrain(DiskDrive.class);
+        Constraint degraded = query.descend("status").constrain("Degraded");
+        Constraint failed = query.descend("status").constrain("Failed");
+        degraded.or(failed);
+        ObjectSet<DiskDrive> result = query.execute();
+        List<DiskDrive> list = new ArrayList<>();
+        while (result.hasNext()) {
+            DiskDrive d = result.next();
+            System.out.println("    -> " + d);
+            list.add(d);
+        }
+        return list;
+    }
+
+    /**
+     * SODA 8: Find Customers sorted by name ascending
+     */
+    public List<Customer> findAllCustomersSortedByName() {
+        System.out.println("\n[SODA] Retrieving all Customers sorted by name (ascending)");
+        Query query = db.query();
+        query.constrain(Customer.class);
+        query.descend("name").orderAscending();
+        ObjectSet<Customer> result = query.execute();
+        List<Customer> list = new ArrayList<>();
+        while (result.hasNext()) {
+            Customer c = result.next();
+            System.out.println("    -> " + c);
+            list.add(c);
+        }
+        return list;
+    }
+
+    /**
+     * SODA 9: Find SoftwareUpgrade with expectedAvailability >= threshold
+     * PERBAIKAN: Menggunakan .descend() dan .greater().equal()
+     */
+    public List<SoftwareUpgrade> findHighImpactUpgrades(double minAvailability) {
+        System.out.println("\n[SODA] Finding SoftwareUpgrades with expectedAvailability >= " + minAvailability);
+        Query query = db.query();
+        query.constrain(SoftwareUpgrade.class);
+        // Perbaikan di baris ini
+        query.descend("expectedAvailability").constrain(minAvailability).greater().equal();
+        
+        ObjectSet<SoftwareUpgrade> result = query.execute();
+        List<SoftwareUpgrade> list = new ArrayList<>();
+        System.out.println("  Found " + result.size() + " result(s):");
+        while (result.hasNext()) {
+            SoftwareUpgrade su = result.next();
+            System.out.println("    -> " + su);
+            list.add(su);
+        }
+        return list;
+    }
+
+    /**
+     * SODA 10: Find DowntimeEvents by affectedService
+     */
+    public List<DowntimeEvent> findDowntimeByService(String service) {
+        System.out.println("\n[SODA] Finding DowntimeEvents for affectedService = '" + service + "'");
+        Query query = db.query();
+        query.constrain(DowntimeEvent.class);
+        query.descend("affectedService").constrain(service);
+        ObjectSet<DowntimeEvent> result = query.execute();
+        List<DowntimeEvent> list = new ArrayList<>();
+        while (result.hasNext()) {
+            DowntimeEvent de = result.next();
+            System.out.println("    -> " + de);
+            list.add(de);
+        }
+        return list;
+    }
+
+    /**
+     * SODA: Find DiskDrives where status is NOT "Healthy" (WHERE NOT)
+     */
+    public List<DiskDrive> findUnhealthyDrives() {
+        System.out.println("\n[SODA] Finding DiskDrives where status is NOT 'Healthy'");
+        Query query = db.query();
+        query.constrain(DiskDrive.class);
+        query.descend("status").constrain("Healthy").not(); // IMPLEMENTASI WHERE NOT
+        
+        ObjectSet<DiskDrive> result = query.execute();
+        List<DiskDrive> list = new ArrayList<>();
+        while (result.hasNext()) {
+            DiskDrive d = result.next();
+            System.out.println("    -> " + d);
+            list.add(d);
+        }
+        return list;
+    }
+
+    /**
+     * SODA: Find EBusiness with specific type AND high revenue (AND logic)
+     */
+    public List<EBusiness> findHighRevenueByType(String type, double threshold) {
+        System.out.println("\n[SODA] Finding " + type + " with Revenue > " + threshold);
+        Query query = db.query();
+        query.constrain(EBusiness.class);
+        
+        // Constraint 1
+        Constraint constrType = query.descend("businessType").constrain(type);
+        // Constraint 2
+        Constraint constrRev = query.descend("annualRevenue").constrain(threshold).greater();
+        
+        // IMPLEMENTASI AND
+        constrType.and(constrRev); 
+        
+        ObjectSet<EBusiness> result = query.execute();
+        List<EBusiness> list = new ArrayList<>();
+        while (result.hasNext()) {
+            EBusiness eb = result.next();
+            System.out.println("    -> " + eb);
+            list.add(eb);
+        }
+        return list;
+    }
+}

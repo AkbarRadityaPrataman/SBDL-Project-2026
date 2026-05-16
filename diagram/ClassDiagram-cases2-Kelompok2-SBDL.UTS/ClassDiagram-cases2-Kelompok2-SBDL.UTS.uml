@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_Sg-iEE35EfGHE8w1uzYEtQ" name="ClassDiagram-cases2-Kelompok2-SBDL" URI="">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_SoJhEE35EfGHE8w1uzYEtQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_VrrjgE35EfGHE8w1uzYEtQ" name="EBusiness">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_2v45YE37EfGHE8w1uzYEtQ" name="businessid = &quot;EB-001&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_7iY_EE37EfGHE8w1uzYEtQ" name="businessType = &quot;Cloud Service&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="__Du-4E37EfGHE8w1uzYEtQ" name="annualRevenue">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDouble"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Njel8E38EfGHE8w1uzYEtQ" name="industryNorm = 99.9"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_QXZfEE38EfGHE8w1uzYEtQ" name="generateReport"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_UZpzkE38EfGHE8w1uzYEtQ" name="receiveComplaint"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_XwqLoE38EfGHE8w1uzYEtQ" name="getAnnualCost"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_bG-HgE35EfGHE8w1uzYEtQ" name="DataCenter">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_bkJrYE38EfGHE8w1uzYEtQ" name="centerId = &quot;DC-001&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_duWSEE38EfGHE8w1uzYEtQ" name="location = &quot;Jakarta&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_gG1MYE38EfGHE8w1uzYEtQ" name="currentAvailability = &quot;98.5%&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_jalcIE38EfGHE8w1uzYEtQ" name="targetAvailability = &quot;99.9%&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_l4XtME38EfGHE8w1uzYEtQ" name="hourlyCost = $150.00"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_jH9iok4eEfGHE8w1uzYEtQ" name="server" type="_dyOz4E35EfGHE8w1uzYEtQ" aggregation="shared" association="_jH6fUE4eEfGHE8w1uzYEtQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_27kQAE4eEfGHE8w1uzYEtQ" name="LiteralInteger1" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_27pIgE4eEfGHE8w1uzYEtQ" name="LiteralUnlimitedNatural1" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_AIz7IE39EfGHE8w1uzYEtQ" name="calculateDowntime"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_CpnD8E39EfGHE8w1uzYEtQ" name="calculateAnnualCost"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ExeIUE39EfGHE8w1uzYEtQ" name="updateAvailability"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_IferIE39EfGHE8w1uzYEtQ" name="getHourlyCost"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_c9sYkE35EfGHE8w1uzYEtQ" name="Vendor">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_vUU00E39EfGHE8w1uzYEtQ" name="vendorId = &quot;VND-001&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_wrajkE39EfGHE8w1uzYEtQ" name="vendorName = &quot;TechSupply Inc&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_yD9q4E39EfGHE8w1uzYEtQ" name="contactInfo = &quot;sales@tech.id&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_zn2fgE39EfGHE8w1uzYEtQ" name="proposeMonthlyCost = $8,200"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_2Gz1QE39EfGHE8w1uzYEtQ" name="propose"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_3WdfQE39EfGHE8w1uzYEtQ" name="estimateImprovement"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_6eYScE39EfGHE8w1uzYEtQ" name="getMonthlyCost"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_8tLFQE39EfGHE8w1uzYEtQ" name="getAnnualCost"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_dYmL4E35EfGHE8w1uzYEtQ" name="AvailabiltyRecord">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_AiIkoE3-EfGHE8w1uzYEtQ" name="recordId = &quot;REC-001&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_CCHwsE3-EfGHE8w1uzYEtQ" name="availailityPercent = 98.5%"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_IQdiQE3-EfGHE8w1uzYEtQ" name="downtimeMinutes = 9300"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_KWqZwE3-EfGHE8w1uzYEtQ" name="costPerYear = $139,500"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_MT9M4E3-EfGHE8w1uzYEtQ" name="getCostPerYear"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_OBE2AE3-EfGHE8w1uzYEtQ" name="getHourlyCost"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_fUISME3-EfGHE8w1uzYEtQ" name="compareToStandard"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_qm18kE3-EfGHE8w1uzYEtQ" name="getDowntimeHourse"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_dyOz4E35EfGHE8w1uzYEtQ" name="Server">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_sklGgE38EfGHE8w1uzYEtQ" name="ServerId = &quot;SRV-001&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_uanbEE38EfGHE8w1uzYEtQ" name="type = &quot;Web&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_v3-w8E38EfGHE8w1uzYEtQ" name="ipAddress = &quot;192.168.1.10&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_xzKEME38EfGHE8w1uzYEtQ" name="status = &quot;Active&quot;"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_aggAkE39EfGHE8w1uzYEtQ" name="getStatus"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_c4KbgE39EfGHE8w1uzYEtQ" name="restart"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_eidaIE39EfGHE8w1uzYEtQ" name="monitor"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_eHzbQE35EfGHE8w1uzYEtQ" name="DiskDrive">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_3456cE38EfGHE8w1uzYEtQ" name="driveId = &quot;DSK-001&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_5iP20E38EfGHE8w1uzYEtQ" name="type = &quot;SSD&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_676_gE38EfGHE8w1uzYEtQ" name="capacity`= &quot;2048&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_9RJxgE38EfGHE8w1uzYEtQ" name="status = &quot;Healthy&quot;"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_n8YW4E39EfGHE8w1uzYEtQ" name="mirror"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_pjuIIE39EfGHE8w1uzYEtQ" name="checkCapacity"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_sY1UEE39EfGHE8w1uzYEtQ" name="expand"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ezljME35EfGHE8w1uzYEtQ" name="SoftwareUpgarde">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_y5GtsE3-EfGHE8w1uzYEtQ" name="upgradedId = &quot;UPG-001&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_1dD4ME3-EfGHE8w1uzYEtQ" name="description = &quot;Patch OS kernel&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_2-fOsE3-EfGHE8w1uzYEtQ" name="estimateMonthlyCost = $5,000,000"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_58q3EE3-EfGHE8w1uzYEtQ" name="expectedAvailability = 99.5%"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_8c4xEE3-EfGHE8w1uzYEtQ" name="diskCapacityExpansion = &quot;512GB&quot;"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Au9DME3_EfGHE8w1uzYEtQ" name="apply"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_DFIQYE3_EfGHE8w1uzYEtQ" name="getExpectedAvailGain"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_KxHrsE3_EfGHE8w1uzYEtQ" name="getAnnualCost"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_MirI4E3_EfGHE8w1uzYEtQ" name="rollback"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_fMGw4E35EfGHE8w1uzYEtQ" name="Customer">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_cUNvAE3_EfGHE8w1uzYEtQ" name="customedId = &quot;CUST-001&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_procEE3_EfGHE8w1uzYEtQ" name="name = &quot;Putri Sintia&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_rgsgQE3_EfGHE8w1uzYEtQ" name="email = &quot;Sintia@gmail.com&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_srOZsE3_EfGHE8w1uzYEtQ" name="constactDate = &quot;2026-04-01&quot;"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_vA8T4E3_EfGHE8w1uzYEtQ" name="submitComplaint"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_wwRjgE3_EfGHE8w1uzYEtQ" name="getComplaintHistory"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_0Y0-kE3_EfGHE8w1uzYEtQ" name="contactSupport"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ywoD8E36EfGHE8w1uzYEtQ" name="CostAnalysis">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="__fB28E3_EfGHE8w1uzYEtQ" name="analysisId = &quot;CA-001&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Bvp1wE4AEfGHE8w1uzYEtQ" name="currentAnnualCost = $394,200"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_DmcYQE4AEfGHE8w1uzYEtQ" name="projectedAnnualCost = 268,800"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_JlbfME4AEfGHE8w1uzYEtQ" name="upgradeCostPerYear = $14,400"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_M0FMgE4AEfGHE8w1uzYEtQ" name="netSavings = $125,400"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_OhxdYE4AEfGHE8w1uzYEtQ" name="justified = true"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_SRq2kE4AEfGHE8w1uzYEtQ" name="justifyExpenditure"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ZXJEcE4AEfGHE8w1uzYEtQ" name="getNetSavings"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_cn1ZIE4AEfGHE8w1uzYEtQ" name="compareScenarios"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_fZV3cE4AEfGHE8w1uzYEtQ" name="calculateROI"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_zcVTYE36EfGHE8w1uzYEtQ" name="Complaint">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_6TNc4E4AEfGHE8w1uzYEtQ" name="complaintId = &quot;CMP-001&quot;" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_-_yAIE-1EfGvcZ3_fiHbzg" name="date = &quot;2026-04-10&quot;" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_jLaPYE-3EfGvcZ3_fiHbzg" name="issuType = &quot;Downtime&quot;" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_yhzKkE-3EfGvcZ3_fiHbzg" name="status = open" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_3twSEE-3EfGvcZ3_fiHbzg" name="resolve = &quot;False&quot;" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_9vP6cE-3EfGvcZ3_fiHbzg" name="escalate =true" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_EvkikE-4EfGvcZ3_fiHbzg" name="logIssue = server timeout" visibility="private"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_FqRZkFBjEfG86a6wwW53DQ" name="IssueAtribute = &quot;Server timeout&quot;" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_eOELoE-3EfGvcZ3_fiHbzg" name="issue" visibility="private"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_zu8tYE36EfGHE8w1uzYEtQ" name="DowntimeEvent">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ROUGsE4BEfGHE8w1uzYEtQ" name="eventId = &quot;DT-001&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_T6OTUE4BEfGHE8w1uzYEtQ" name="startTime = &quot;2026-04-10 01:00&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_VrMhsE4BEfGHE8w1uzYEtQ" name="endTime = &quot;2026-04-10 03:00&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_YJCdIE4BEfGHE8w1uzYEtQ" name="durationHours = 2"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_0-izYE4CEfGHE8w1uzYEtQ" name="cause = &quot;Disk Failure&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_3FTrkE4CEfGHE8w1uzYEtQ" name="affectedService = &quot;WebApp&quot;"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_5UMlAE4CEfGHE8w1uzYEtQ" name="getDurationHours"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_7WWC8E4CEfGHE8w1uzYEtQ" name="getCostImpact"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_9LK2kE4CEfGHE8w1uzYEtQ" name="triggerComplaint"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-66V4E4CEfGHE8w1uzYEtQ" name="logEvent"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_NUoikE4FEfGHE8w1uzYEtQ" memberEnd="_NUupME4FEfGHE8w1uzYEtQ _NUweYE4FEfGHE8w1uzYEtQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NUtbEE4FEfGHE8w1uzYEtQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NUuCIE4FEfGHE8w1uzYEtQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_NUupME4FEfGHE8w1uzYEtQ" name="datacenter" type="_bG-HgE35EfGHE8w1uzYEtQ" association="_NUoikE4FEfGHE8w1uzYEtQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_NUweYE4FEfGHE8w1uzYEtQ" name="ebusiness" type="_VrrjgE35EfGHE8w1uzYEtQ" association="_NUoikE4FEfGHE8w1uzYEtQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_xtCBgE4REfGHE8w1uzYEtQ" memberEnd="_xtD2sk4REfGHE8w1uzYEtQ _xtEdwE4REfGHE8w1uzYEtQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xtD2sE4REfGHE8w1uzYEtQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xtD2sU4REfGHE8w1uzYEtQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_xtD2sk4REfGHE8w1uzYEtQ" name="diskdrive" type="_eHzbQE35EfGHE8w1uzYEtQ" association="_xtCBgE4REfGHE8w1uzYEtQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_xtEdwE4REfGHE8w1uzYEtQ" name="server" type="_dyOz4E35EfGHE8w1uzYEtQ" association="_xtCBgE4REfGHE8w1uzYEtQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_CbDeAE4SEfGHE8w1uzYEtQ" memberEnd="_CbEsIE4SEfGHE8w1uzYEtQ _CbFTME4SEfGHE8w1uzYEtQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CbEFEE4SEfGHE8w1uzYEtQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CbEFEU4SEfGHE8w1uzYEtQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_CbEsIE4SEfGHE8w1uzYEtQ" name="vendor" type="_c9sYkE35EfGHE8w1uzYEtQ" association="_CbDeAE4SEfGHE8w1uzYEtQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VmTfAE4fEfGHE8w1uzYEtQ" name="LiteralInteger1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VmUGEE4fEfGHE8w1uzYEtQ" name="LiteralUnlimitedNatural1" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_CbFTME4SEfGHE8w1uzYEtQ" name="ebusiness" type="_VrrjgE35EfGHE8w1uzYEtQ" association="_CbDeAE4SEfGHE8w1uzYEtQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_G55n4E4SEfGHE8w1uzYEtQ" client="_c9sYkE35EfGHE8w1uzYEtQ" supplier="_ywoD8E36EfGHE8w1uzYEtQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_RVNwME4SEfGHE8w1uzYEtQ" client="_ezljME35EfGHE8w1uzYEtQ" supplier="_dYmL4E35EfGHE8w1uzYEtQ"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_wnrGgE4SEfGHE8w1uzYEtQ" memberEnd="_wns7sk4SEfGHE8w1uzYEtQ _wntiwE4SEfGHE8w1uzYEtQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wns7sE4SEfGHE8w1uzYEtQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wns7sU4SEfGHE8w1uzYEtQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_wns7sk4SEfGHE8w1uzYEtQ" name="availabiltyrecord" type="_dYmL4E35EfGHE8w1uzYEtQ" association="_wnrGgE4SEfGHE8w1uzYEtQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EIpf4E4gEfGHE8w1uzYEtQ" name="LiteralInteger1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EIqG8E4gEfGHE8w1uzYEtQ" name="LiteralUnlimitedNatural1" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_wntiwE4SEfGHE8w1uzYEtQ" name="datacenter" type="_bG-HgE35EfGHE8w1uzYEtQ" association="_wnrGgE4SEfGHE8w1uzYEtQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_vE_9YE4TEfGHE8w1uzYEtQ" memberEnd="_vFBykk4TEfGHE8w1uzYEtQ _vFCZoE4TEfGHE8w1uzYEtQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vFBykE4TEfGHE8w1uzYEtQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vFBykU4TEfGHE8w1uzYEtQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_vFBykk4TEfGHE8w1uzYEtQ" name="customer" type="_fMGw4E35EfGHE8w1uzYEtQ" association="_vE_9YE4TEfGHE8w1uzYEtQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_vFCZoE4TEfGHE8w1uzYEtQ" name="complaint" type="_zcVTYE36EfGHE8w1uzYEtQ" association="_vE_9YE4TEfGHE8w1uzYEtQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Rb43kE4gEfGHE8w1uzYEtQ" name="LiteralInteger1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Rb43kU4gEfGHE8w1uzYEtQ" name="LiteralUnlimitedNatural1" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jH6fUE4eEfGHE8w1uzYEtQ" memberEnd="_jH9iok4eEfGHE8w1uzYEtQ _jH-wwk4eEfGHE8w1uzYEtQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_jH9ioE4eEfGHE8w1uzYEtQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_jH9ioU4eEfGHE8w1uzYEtQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_jH-wwk4eEfGHE8w1uzYEtQ" name="datacenter" type="_bG-HgE35EfGHE8w1uzYEtQ" association="_jH6fUE4eEfGHE8w1uzYEtQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_oXpeIE4fEfGHE8w1uzYEtQ" memberEnd="_oXrTUk4fEfGHE8w1uzYEtQ _oXtIgE4fEfGHE8w1uzYEtQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oXrTUE4fEfGHE8w1uzYEtQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oXrTUU4fEfGHE8w1uzYEtQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_oXrTUk4fEfGHE8w1uzYEtQ" name="vendor" type="_c9sYkE35EfGHE8w1uzYEtQ" association="_oXpeIE4fEfGHE8w1uzYEtQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5dIYYE4fEfGHE8w1uzYEtQ" name="LiteralInteger1" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5dI_cE4fEfGHE8w1uzYEtQ" name="LiteralUnlimitedNatural1" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_oXtIgE4fEfGHE8w1uzYEtQ" name="softwareupgarde" type="_ezljME35EfGHE8w1uzYEtQ" association="_oXpeIE4fEfGHE8w1uzYEtQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xHI90E4fEfGHE8w1uzYEtQ" name="LiteralInteger1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xHI90U4fEfGHE8w1uzYEtQ" name="LiteralUnlimitedNatural1" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_ERHp8E4hEfGHE8w1uzYEtQ" client="_zcVTYE36EfGHE8w1uzYEtQ" supplier="_zu8tYE36EfGHE8w1uzYEtQ"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_2-CvcE7SEfGepsKpnRvpfA" name="avRec01 : AvailabilityRecord">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_8L9l0E7SEfGepsKpnRvpfA" name="recordId = &quot;REC-001&quot;"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_8nu70E7SEfGepsKpnRvpfA" name="availabilityPercent = 98.5%"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_9aeAUE7SEfGepsKpnRvpfA" name="downtimeMinutes = 9300"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_98yDME7SEfGepsKpnRvpfA" name="costPerYear = $139,500"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_T_0R4FBaEfG86a6wwW53DQ" name="techCorp : EBusiness">
+    <slot xmi:type="uml:Slot" xmi:id="_g8MMQFBbEfG86a6wwW53DQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_hMuioFBbEfG86a6wwW53DQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_hVOXUFBbEfG86a6wwW53DQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_hZ7RIFBbEfG86a6wwW53DQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_heb9sFBbEfG86a6wwW53DQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_hr1ggFBbEfG86a6wwW53DQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_jD9xEFBbEfG86a6wwW53DQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_N3hzEFBcEfG86a6wwW53DQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_N86pYFBcEfG86a6wwW53DQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_OByiUFBcEfG86a6wwW53DQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_W4PloFBcEfG86a6wwW53DQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_yrMvMFBcEfG86a6wwW53DQ" definingFeature="_2v45YE37EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_F2FPsFBdEfG86a6wwW53DQ" definingFeature="_7iY_EE37EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_iAt5cFBdEfG86a6wwW53DQ" definingFeature="__Du-4E37EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_uvU6EFBdEfG86a6wwW53DQ" definingFeature="_Njel8E38EfGHE8w1uzYEtQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_YQgD8FBaEfG86a6wwW53DQ" name="CopyOf_EBusiness_48"/>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_aM77cFBaEfG86a6wwW53DQ" name="vendorA : Vendor">
+    <slot xmi:type="uml:Slot" xmi:id="_BASTgFBfEfG86a6wwW53DQ" definingFeature="_vUU00E39EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_W8wx4FBfEfG86a6wwW53DQ" definingFeature="_wrajkE39EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_dBRSAFBfEfG86a6wwW53DQ" definingFeature="_yD9q4E39EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_j9Ra0FBfEfG86a6wwW53DQ" definingFeature="_zn2fgE39EfGHE8w1uzYEtQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_ipmlwFBaEfG86a6wwW53DQ" name="dc1 : DataCenter">
+    <slot xmi:type="uml:Slot" xmi:id="_TMCuwFBeEfG86a6wwW53DQ" definingFeature="_bkJrYE38EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_qg4uQFBeEfG86a6wwW53DQ" definingFeature="_duWSEE38EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_xMuUIFBeEfG86a6wwW53DQ" definingFeature="_gG1MYE38EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_1wEjgFBeEfG86a6wwW53DQ" definingFeature="_jalcIE38EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_55nLwFBeEfG86a6wwW53DQ" definingFeature="_l4XtME38EfGHE8w1uzYEtQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_lHkdAFBaEfG86a6wwW53DQ" name="upgrade01 : SoftwareUpgrade">
+    <slot xmi:type="uml:Slot" xmi:id="_p_ifQFBfEfG86a6wwW53DQ" definingFeature="_y5GtsE3-EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_wQzpAFBfEfG86a6wwW53DQ" definingFeature="_1dD4ME3-EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_2ATicFBfEfG86a6wwW53DQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_2G9kEFBfEfG86a6wwW53DQ" definingFeature="_2-fOsE3-EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_7h90MFBfEfG86a6wwW53DQ" definingFeature="_58q3EE3-EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_AecVQFBgEfG86a6wwW53DQ" definingFeature="_8c4xEE3-EfGHE8w1uzYEtQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_nFFSkFBaEfG86a6wwW53DQ" name="webServer1 : Server">
+    <slot xmi:type="uml:Slot" xmi:id="_HdE7UFBgEfG86a6wwW53DQ" definingFeature="_sklGgE38EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_LJ2vEFBgEfG86a6wwW53DQ" definingFeature="_uanbEE38EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_QCLv8FBgEfG86a6wwW53DQ" definingFeature="_v3-w8E38EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_XXw2YFBgEfG86a6wwW53DQ" definingFeature="_xzKEME38EfGHE8w1uzYEtQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_p2uTwFBaEfG86a6wwW53DQ" name="sintia : Customer">
+    <slot xmi:type="uml:Slot" xmi:id="_caRG8FBgEfG86a6wwW53DQ" definingFeature="_cUNvAE3_EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_g9lhIFBgEfG86a6wwW53DQ" definingFeature="_procEE3_EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_nQpaoFBgEfG86a6wwW53DQ" definingFeature="_rgsgQE3_EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_tQmx8FBgEfG86a6wwW53DQ" definingFeature="_srOZsE3_EfGHE8w1uzYEtQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_r1K9cFBaEfG86a6wwW53DQ" name="disk01 : DiskDrive">
+    <slot xmi:type="uml:Slot" xmi:id="_yUW_sFBgEfG86a6wwW53DQ" definingFeature="_3456cE38EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_4OD-AFBgEfG86a6wwW53DQ" definingFeature="_5iP20E38EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_79nY8FBgEfG86a6wwW53DQ" definingFeature="_676_gE38EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_KF4UIFBhEfG86a6wwW53DQ" definingFeature="_9RJxgE38EfGHE8w1uzYEtQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_uXUKEFBaEfG86a6wwW53DQ" name="downEv01 : DowntimeEvent">
+    <slot xmi:type="uml:Slot" xmi:id="_RZ1C4FBhEfG86a6wwW53DQ" definingFeature="_ROUGsE4BEfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_XMXCMFBhEfG86a6wwW53DQ" definingFeature="_T6OTUE4BEfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_euCq8FBhEfG86a6wwW53DQ" definingFeature="_VrMhsE4BEfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_jke1cFBhEfG86a6wwW53DQ" definingFeature="_YJCdIE4BEfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_p85wEFBhEfG86a6wwW53DQ" definingFeature="_0-izYE4CEfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_vMKDMFBhEfG86a6wwW53DQ" definingFeature="_3FTrkE4CEfGHE8w1uzYEtQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_xW2dUFBaEfG86a6wwW53DQ" name="avRec01 : AvailabilityRecord">
+    <slot xmi:type="uml:Slot" xmi:id="_0WRXoFBhEfG86a6wwW53DQ" definingFeature="_AiIkoE3-EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_6SyZYFBhEfG86a6wwW53DQ" definingFeature="_CCHwsE3-EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="__uz9MFBhEfG86a6wwW53DQ" definingFeature="_IQdiQE3-EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_E5_ooFBiEfG86a6wwW53DQ" definingFeature="_KWqZwE3-EfGHE8w1uzYEtQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_zyOTkFBaEfG86a6wwW53DQ" name="costAnal01 : CostAnalysis">
+    <slot xmi:type="uml:Slot" xmi:id="_LkZrIFBiEfG86a6wwW53DQ" definingFeature="__fB28E3_EfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_Pkp0gFBiEfG86a6wwW53DQ" definingFeature="_Bvp1wE4AEfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_UtDRsFBiEfG86a6wwW53DQ" definingFeature="_DmcYQE4AEfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_jUy-MFBiEfG86a6wwW53DQ" definingFeature="_JlbfME4AEfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_prlhIFBiEfG86a6wwW53DQ" definingFeature="_M0FMgE4AEfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_u9QPEFBiEfG86a6wwW53DQ" definingFeature="_OhxdYE4AEfGHE8w1uzYEtQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_2JK80FBaEfG86a6wwW53DQ" name="comp01 : Complaint">
+    <slot xmi:type="uml:Slot" xmi:id="_zo0mUFBiEfG86a6wwW53DQ" definingFeature="_6TNc4E4AEfGHE8w1uzYEtQ"/>
+    <slot xmi:type="uml:Slot" xmi:id="_4w7IkFBiEfG86a6wwW53DQ" definingFeature="_-_yAIE-1EfGvcZ3_fiHbzg"/>
+    <slot xmi:type="uml:Slot" xmi:id="_66XhUFBiEfG86a6wwW53DQ" definingFeature="_jLaPYE-3EfGvcZ3_fiHbzg"/>
+    <slot xmi:type="uml:Slot" xmi:id="_lf0O0FBjEfG86a6wwW53DQ" definingFeature="_3twSEE-3EfGvcZ3_fiHbzg"/>
+    <slot xmi:type="uml:Slot" xmi:id="_s0_soFBjEfG86a6wwW53DQ" definingFeature="_yhzKkE-3EfGvcZ3_fiHbzg"/>
+    <slot xmi:type="uml:Slot" xmi:id="_vumXAFBjEfG86a6wwW53DQ" definingFeature="_9vP6cE-3EfGvcZ3_fiHbzg"/>
+    <slot xmi:type="uml:Slot" xmi:id="_yROEwFBjEfG86a6wwW53DQ" definingFeature="_EvkikE-4EfGvcZ3_fiHbzg"/>
+    <slot xmi:type="uml:Slot" xmi:id="_2LC2AFBjEfG86a6wwW53DQ" definingFeature="_FqRZkFBjEfG86a6wwW53DQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="__nqaEFBmEfG86a6wwW53DQ" name="InstanceSpecification39">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CsNwMFBnEfG86a6wwW53DQ" source="InstanceEnd" references="_T_0R4FBaEfG86a6wwW53DQ _ipmlwFBaEfG86a6wwW53DQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_FtrWEFBnEfG86a6wwW53DQ" name="InstanceSpecification40">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GP7ukFBnEfG86a6wwW53DQ" source="InstanceEnd" references="_T_0R4FBaEfG86a6wwW53DQ _aM77cFBaEfG86a6wwW53DQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_K9axYFBnEfG86a6wwW53DQ" name="InstanceSpecification41">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LXNKYFBnEfG86a6wwW53DQ" source="InstanceEnd" references="_ipmlwFBaEfG86a6wwW53DQ _nFFSkFBaEfG86a6wwW53DQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_M1OAgFBnEfG86a6wwW53DQ" name="InstanceSpecification42">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NOp0MFBnEfG86a6wwW53DQ" source="InstanceEnd" references="_nFFSkFBaEfG86a6wwW53DQ _r1K9cFBaEfG86a6wwW53DQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_OqZZcFBnEfG86a6wwW53DQ" name="InstanceSpecification43">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PIXH0FBnEfG86a6wwW53DQ" source="InstanceEnd" references="_aM77cFBaEfG86a6wwW53DQ _lHkdAFBaEfG86a6wwW53DQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_YybZYFBnEfG86a6wwW53DQ" name="InstanceSpecification44">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ZLbIMFBnEfG86a6wwW53DQ" source="InstanceEnd" references="_ipmlwFBaEfG86a6wwW53DQ _xW2dUFBaEfG86a6wwW53DQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_eXPFwFBnEfG86a6wwW53DQ" name="InstanceSpecification45">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_evB6sFBnEfG86a6wwW53DQ" source="InstanceEnd" references="_lHkdAFBaEfG86a6wwW53DQ _xW2dUFBaEfG86a6wwW53DQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_lH5hQFBnEfG86a6wwW53DQ" name="InstanceSpecification46">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ldtZMFBnEfG86a6wwW53DQ" source="InstanceEnd" references="_xW2dUFBaEfG86a6wwW53DQ _zyOTkFBaEfG86a6wwW53DQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_ojQN0FBnEfG86a6wwW53DQ" name="InstanceSpecification47">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pGCKwFBnEfG86a6wwW53DQ" source="InstanceEnd" references="_p2uTwFBaEfG86a6wwW53DQ _2JK80FBaEfG86a6wwW53DQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_uIyS8FBnEfG86a6wwW53DQ" name="InstanceSpecification48">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uggPYFBnEfG86a6wwW53DQ" source="InstanceEnd" references="_uXUKEFBaEfG86a6wwW53DQ _2JK80FBaEfG86a6wwW53DQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_M0l48FBoEfG86a6wwW53DQ" client="_VrrjgE35EfGHE8w1uzYEtQ" supplier="_dYmL4E35EfGHE8w1uzYEtQ"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_Pjr8cFBoEfG86a6wwW53DQ" client="_ywoD8E36EfGHE8w1uzYEtQ" supplier="_dYmL4E35EfGHE8w1uzYEtQ"/>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="__7ylME7gEfG9L_M0kfostg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__8QfQE7gEfG9L_M0kfostg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>
